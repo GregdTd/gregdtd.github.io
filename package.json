@@ -1,0 +1,9 @@
+{
+  "name": "site-mariage-ju-greg-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:GregdTd/gregdtd.github.io.git",
+  "author": "GregdTd <gregoire@lalilo.com>",
+  "license": "License.md",
+  "private": true
+}
