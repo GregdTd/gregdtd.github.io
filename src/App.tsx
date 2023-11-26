@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import './App.css'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import styled from 'styled-components';
+import NavigationBar from './components/NavBar';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const BaseSection: React.FC<{title: string, id:string, className?: string}> = ({title, id, className}) => (<div id={id} className={className}>{title}</div>)
+
+export const App = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <ScrollLink to="section1" smooth={true} duration={500}>
+              Section 1
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="section2" smooth={true} duration={500}>
+              Section 2
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="section3" smooth={true} duration={500}>
+              Section 3
+            </ScrollLink>
+          </li>
+        </ul>
+      </nav>
+    <NavigationBar/>
+      <Section id="section1" title="Section 1" />
+      <Section id="section2" title="Section 2" />
+      <Section id="section3" title="Section 3" />
 
-export default App
+      <button onClick={scrollToTop}>Scroll to Top</button>
+    </div>
+  );
+};
+
+export default App;
+
+const Section = styled(BaseSection)`
+height: 800px
+`
