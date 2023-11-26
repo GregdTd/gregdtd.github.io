@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'retro-signature';
+    font-weight: 500;
+  font-style: normal;
+  src: url('RetroSignature.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'caviar-dreams';
+    font-weight: 500;
+  font-style: normal;
+  src: url('CaviarDreams.ttf') format('truetype');
+}

@@ -59,6 +59,8 @@ const Header = styled(BaseHeader)`
 `
 
 const Title = styled.div`
+    font-family: 'retro-signature';
+    font-size: 40px;
     width: 200px;
     float: left;
 `
