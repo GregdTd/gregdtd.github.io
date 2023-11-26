@@ -1,5 +1,6 @@
 import { ConfigProvider } from 'antd'
 import { NavigationBar } from './components/NavigationBar'
+import { Housing } from './pages/Housing'
 import { Place } from './pages/Place'
 import { Welcome } from './pages/Welcome'
 import { Colors } from './styles/color'
@@ -21,6 +22,7 @@ export const App = () => (
         <NavigationBar />
         <Welcome />
         <Place />
+        <Housing />
     </ConfigProvider>
 )
 

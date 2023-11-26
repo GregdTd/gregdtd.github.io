@@ -2,7 +2,7 @@ import { MenuOutlined } from '@ant-design/icons'
 import { Button, Drawer, Layout } from 'antd'
 import { Header as BaseHeader } from 'antd/es/layout/layout'
 import { useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
+import { useMedia } from 'react-use'
 import styled from 'styled-components'
 import { Menu } from './Menu'
 
@@ -13,7 +13,7 @@ export const NavigationBar = () => {
     const showDrawer = () => {
         setOpen(!open)
     }
-    const isTabletOrMobile = useMediaQuery({ maxWidth: 800 })
+    const isTabletOrMobile = useMedia(`screen and (max-width: 1024px)`)
 
     return (
         <Nav>
