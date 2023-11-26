@@ -1,71 +1,77 @@
-import { CalendarFilled, CompassFilled, GiftFilled, HomeFilled, RocketFilled } from '@ant-design/icons'
-import type { MenuProps } from 'antd'
-import { Menu } from 'antd'
-import React, { useState } from 'react'
-import { scroller } from 'react-scroll'
+import { MenuOutlined } from '@ant-design/icons'
+import { Button, Drawer, Layout } from 'antd'
+import { Header as BaseHeader } from 'antd/es/layout/layout'
+import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
+import { Menu } from './Menu'
 
-const items: MenuProps['items'] = [
-    {
-        label: 'Programme',
-        key: 'program',
-        icon: <CalendarFilled />,
-    },
-    {
-        label: 'Accès',
-        key: 'place',
-        icon: <CompassFilled />,
-    },
-    {
-        label: 'Logements',
-        key: 'housing',
-        icon: <HomeFilled />,
-    },
-    {
-        label: 'Activités',
-        key: 'activity',
-        icon: <RocketFilled />,
-    },
-    {
-        label: 'Liste de mariage',
-        key: 'list',
-        icon: <GiftFilled />,
-    },
-]
+const TITLE = 'Vendredi 14 Juin'
 
-export const NavigationBar: React.FC = () => {
-    const [current, setCurrent] = useState('mail')
-
-    const onClick: MenuProps['onClick'] = (e) => {
-        setCurrent(e.key)
-        scroller.scrollTo(e.key, { smooth: true, duration: 500 })
+export const NavigationBar = () => {
+    const [open, setOpen] = useState(false)
+    const showDrawer = () => {
+        setOpen(!open)
     }
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 800 })
 
     return (
-        <Wrapper>
-            <Title>Vendredi 14 Juin 2024</Title>
-            <StyledMenu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
-        </Wrapper>
+        <Nav>
+            <Layout>
+                <Header className="nav-header">
+                    <Title>{TITLE}</Title>
+                    <NavBarMenu>
+                        {isTabletOrMobile ? (
+                            <>
+                                <BurgerButton className="menuButton" type="text" onClick={showDrawer}>
+                                    <MenuOutlined />
+                                </BurgerButton>
+                                <Drawer title={TITLE} placement="right" closable={true} onClose={showDrawer} open={open} style={{ zIndex: 99999 }}>
+                                    <Menu mode="inline" />
+                                </Drawer>
+                            </>
+                        ) : (
+                            <Menu mode="horizontal" />
+                        )}
+                    </NavBarMenu>
+                </Header>
+            </Layout>
+        </Nav>
     )
 }
 
-const Wrapper = styled.div`
+const Nav = styled.nav`
+    padding-bottom: 1px;
+    border-bottom: solid 1px #e8e8e8;
+    background-color: white;
+    box-shadow:
+        0 3px 6px -2px rgba(0, 0, 0, 0.12),
+        0 6px 16px -11px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
+    margin-bottom: 20px;
+    z-index: 99990;
+`
+const Header = styled(BaseHeader)`
     background-color: white;
-    color: black;
-    padding: 0px 8px;
+    border-bottom: 0;
+    padding: 0 4px 0 24px;
 `
 
-const Title = styled.span`
-    width: 165px;
+const Title = styled.div`
+    width: 200px;
+    float: left;
 `
 
-const StyledMenu = styled(Menu)`
-    justify-content: flex-end;
-    flex: auto;
-    min-width: 0px;
+const NavBarMenu = styled.div`
+    width: calc(100% - 200px);
+    float: left;
+`
+
+const BurgerButton = styled(Button)`
+    float: right;
+    height: 32px;
+    padding: 6px;
+    margin-top: 14px;
+    margin-right: 10px;
 `
