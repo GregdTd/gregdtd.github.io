@@ -3,7 +3,8 @@ import { NavigationBar } from './components/NavigationBar'
 import { Housing } from './pages/Housing'
 import { Place } from './pages/Place'
 import { Welcome } from './pages/Welcome'
-import { Colors } from './styles/color'
+import { Colors } from './styles/Color'
+
 export const App = () => (
     <ConfigProvider
         theme={{

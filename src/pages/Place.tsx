@@ -1,3 +1,5 @@
+import { SectionWrapper } from '../styles/Layout'
+
 export const Place: React.FC = () => {
-    return <section id="place"></section>
+    return <SectionWrapper id="place"></SectionWrapper>
 }

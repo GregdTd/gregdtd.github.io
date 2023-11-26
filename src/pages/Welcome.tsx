@@ -1,19 +1,15 @@
 import styled from 'styled-components'
+import { SectionWrapper } from '../styles/Layout'
 
 export const Welcome: React.FC = () => {
     return (
-        <Wrapper>
+        <SectionWrapper>
             <Title>
                 Bienvenue sur le site du Mariage de<Surname>Julie et Grégoire</Surname>
             </Title>
-        </Wrapper>
+        </SectionWrapper>
     )
 }
-
-const Wrapper = styled.section`
-    width: 100%;
-    text-align: center;
-`
 
 const Title = styled.h1`
     font-size: 28px;

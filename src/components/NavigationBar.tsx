@@ -2,6 +2,7 @@ import { MenuOutlined } from '@ant-design/icons'
 import { Button, Drawer, Layout } from 'antd'
 import { Header as BaseHeader } from 'antd/es/layout/layout'
 import { useState } from 'react'
+import { animateScroll } from 'react-scroll'
 import { useMedia } from 'react-use'
 import styled from 'styled-components'
 import { Menu } from './Menu'
@@ -19,7 +20,7 @@ export const NavigationBar = () => {
         <Nav>
             <Layout>
                 <Header className="nav-header">
-                    <Title>{TITLE}</Title>
+                    <Title onClick={() => animateScroll.scrollToTop({ duration: 500, smooth: true })}>{TITLE}</Title>
                     <NavBarMenu>
                         {isTabletOrMobile ? (
                             <>

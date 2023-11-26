@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import { SectionWrapper } from '../styles/Layout'
 
 export const Housing: React.FC = () => {
     return (
-        <Wrapper id="housing">
+        <SectionWrapper id="housing">
             <text>
                 Nous vous conseillons vivement de regarder les appartements et maisons sur Airbnb, Abritel ou Booking. Dans la région, beaucoup sont des locations saisonnières,
                 vous devriez trouver votre bonheur. Nous vous conseillons les villes de Crac’h si vous souhaitez être proche du lieu de mariage, Locmariaquer (lieu de la messe), La
@@ -16,11 +16,6 @@ export const Housing: React.FC = () => {
                 https://www.booking.com/Share-IQmIv8 - Trinité Hotel : https://www.booking.com/Share-BLBKkYc LOCMARIAQUER (lieu de la messe - 12 min en voiture du lieu du mariage)
                 CHAMBRES D’HOTE (💵💵💵) - Rêves de bord de mer : https://www.booking.com/Share-z3UNCq
             </div>
-        </Wrapper>
+        </SectionWrapper>
     )
 }
-
-const Wrapper = styled.section`
-    width: 100%;
-    text-align: center;
-`
