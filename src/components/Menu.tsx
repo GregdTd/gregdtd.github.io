@@ -4,6 +4,7 @@ import { Menu as BaseMenu } from 'antd'
 import React, { useState } from 'react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
+import { Colors } from '../styles/Color'
 
 const items: MenuProps['items'] = [
     {
@@ -45,6 +46,7 @@ export const Menu: React.FC<{ mode: 'horizontal' | 'vertical' | 'inline' }> = ({
 }
 
 const SMenu = styled(BaseMenu)`
+    color: ${Colors.dark_green};
     justify-content: flex-end;
     flex: auto;
     min-width: 0px;

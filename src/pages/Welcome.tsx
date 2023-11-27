@@ -5,7 +5,7 @@ export const Welcome: React.FC = () => {
     return (
         <SectionWrapper>
             <Title>
-                Bienvenue sur le site du Mariage de<Surname>Julie et Grégoire</Surname>
+                Bienvenue sur le site du mariage de<Surname>Julie et Grégoire</Surname>
             </Title>
         </SectionWrapper>
     )
