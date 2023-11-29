@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { Colors } from '../styles/Color'
 import { Menu } from './Menu'
 
-const TITLE = 'Vendredi 14 Juin'
+const TITLE = 'Vendredi 14 juin'
 
 export const NavigationBar = () => {
     const [open, setOpen] = useState(false)
@@ -40,7 +40,9 @@ export const NavigationBar = () => {
     )
 }
 
+const TITLE_WIDTH = 230
 const Header = styled(BaseHeader)`
+    color: ${Colors.dark_green};
     padding-bottom: 1px;
     border-bottom: solid 1px #e8e8e8;
     background-color: ${Colors.white};
@@ -59,13 +61,14 @@ const Header = styled(BaseHeader)`
 
 const Title = styled.div`
     font-family: 'retro-signature';
-    font-size: 40px;
-    width: 200px;
+    font-size: 50px;
+    width: ${TITLE_WIDTH}px;
     float: left;
+    cursor: pointer;
 `
 
 const NavBarMenu = styled.div`
-    width: calc(100% - 200px);
+    width: calc(100% - ${TITLE_WIDTH}px);
     float: left;
 `
 
