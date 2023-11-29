@@ -11,7 +11,7 @@ export const App = () => (
         theme={{
             token: {
                 fontFamily: 'caviar-dreams',
-                fontSize: 14,
+                fontSize: 18,
             },
             components: {
                 Menu: {
