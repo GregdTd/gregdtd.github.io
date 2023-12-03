@@ -3,7 +3,7 @@ import BaseMeta from 'antd/es/card/Meta'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import styled from 'styled-components'
-import { Colors } from '../styles/Color'
+import { Colors } from '../styles/Colors'
 import { SectionWrapper } from '../styles/Layout'
 export const Program: React.FC = () => {
     dayjs.extend(customParseFormat)

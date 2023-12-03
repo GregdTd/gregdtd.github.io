@@ -4,7 +4,7 @@ import { Menu as BaseMenu } from 'antd'
 import React, { useState } from 'react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
-import { Colors } from '../styles/Color'
+import { Colors } from '../styles/Colors'
 
 const items: MenuProps['items'] = [
     {

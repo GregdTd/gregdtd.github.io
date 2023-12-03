@@ -5,7 +5,7 @@ import { Housing } from './pages/Housing'
 import { Place } from './pages/Place'
 import { Program } from './pages/Program'
 import { Welcome } from './pages/Welcome'
-import { Colors } from './styles/Color'
+import { Colors } from './styles/Colors'
 
 export const App = () => (
     <ConfigProvider

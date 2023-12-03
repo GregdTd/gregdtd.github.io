@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { animateScroll } from 'react-scroll'
 import { useMedia } from 'react-use'
 import styled from 'styled-components'
-import { Colors } from '../styles/Color'
+import { Colors } from '../styles/Colors'
 import { Menu } from './Menu'
 
 const TITLE = 'Vendredi 14 juin'
