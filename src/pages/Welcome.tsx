@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 import BaseJulieGregPhoto from '../assets/jugreg.svg?react'
 
-// import SeaBackground from '../assets/test.jpg'
 import { Arrow } from '../components/Arrow'
 import { SectionWrapper } from '../styles/Layout'
 import { mobile } from '../styles/media-queries'
