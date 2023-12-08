@@ -21,15 +21,15 @@ export const Program: React.FC = () => {
                         </Item>
 
                         <Item>
-                            <Meta avatar={<Emoji>🍸</Emoji>} title={<ItemTitle>Cocktail</ItemTitle>} description={<Description>Château de Kérantré à Crach'h</Description>} />
+                            <Meta avatar={<Emoji>🍸</Emoji>} title={<ItemTitle>Cocktail</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>17h30</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>🍽️</Emoji>} title={<ItemTitle>Dîner</ItemTitle>} description={<Description>Château de Kérantré à Crach'h</Description>} />
+                            <Meta avatar={<Emoji>🍽️</Emoji>} title={<ItemTitle>Dîner</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>20h00</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>💃</Emoji>} title={<ItemTitle>Soirée</ItemTitle>} description={<Description>Château de Kérantré à Crach'h</Description>} />
+                            <Meta avatar={<Emoji>💃</Emoji>} title={<ItemTitle>Soirée</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>23h30</Tag>
                         </Item>
                     </Card>
@@ -41,7 +41,7 @@ export const Program: React.FC = () => {
                             <Tag bordered={false}>17h30</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>🪩</Emoji>} title={<ItemTitle>Rebond</ItemTitle>} description={<Description>Château de Kérantré à Crach'h</Description>} />
+                            <Meta avatar={<Emoji>🪩</Emoji>} title={<ItemTitle>Rebond</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>20h30</Tag>
                         </Item>
                     </Card>
@@ -64,7 +64,7 @@ const Column = styled.div`
 `
 
 const Card = styled(BaseCard)`
-    width: 370px;
+    width: 460px;
     box-shadow:
         rgba(0, 0, 0, 0.07) 0px 1px 2px,
         rgba(0, 0, 0, 0.07) 0px 2px 4px,

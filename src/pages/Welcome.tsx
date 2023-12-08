@@ -71,7 +71,7 @@ const Surname = styled.div`
 
 const WrapperText = styled.div`
     width: 50%;
-    font-size: 22px;
+    font-size: 20px;
 
     @media ${mobile} {
         width: 100%;
