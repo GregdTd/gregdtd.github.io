@@ -1,12 +1,10 @@
 import { Card as BaseCard, Tag as BaseTag } from 'antd'
 import BaseMeta from 'antd/es/card/Meta'
-import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
 import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
 import { SectionWrapper } from '../styles/Layout'
+
 export const Program: React.FC = () => {
-    dayjs.extend(customParseFormat)
     return (
         <SectionWrapper id="program" title="Programme">
             <ColumnWrapper>
@@ -56,7 +54,8 @@ const ColumnWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 36px;
+    margin: 0px 24px;
+    gap: 24px;
 `
 
 const Column = styled.div`
@@ -64,6 +63,7 @@ const Column = styled.div`
 `
 
 const Card = styled(BaseCard)`
+    width: 370px;
     box-shadow:
         rgba(0, 0, 0, 0.07) 0px 1px 2px,
         rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -76,6 +76,7 @@ const Card = styled(BaseCard)`
 const Item = styled.li`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style-type: none;
 
     .ant-card-meta-title {
@@ -99,7 +100,6 @@ const Meta = styled(BaseMeta)`
     padding-bottom: 36px;
 `
 const ItemTitle = styled.div`
-    width: 360px;
     margin-bottom: 0 !important;
 `
 

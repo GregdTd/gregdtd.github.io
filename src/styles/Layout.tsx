@@ -9,7 +9,6 @@ export const SectionWrapper: React.FC<{ title: string; id: string; children?: Re
     )
 }
 const Section = styled.section`
-    height: 100vh;
     width: 100%;
     text-align: center;
     padding-top: 80px;
