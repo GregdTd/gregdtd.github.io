@@ -28,7 +28,7 @@ export const NavigationBar = () => {
                                 <MenuOutlined />
                             </BurgerButton>
                             <Drawer title={TITLE} placement="right" closable={true} onClose={showDrawer} open={open} style={{ zIndex: 99999 }}>
-                                <Menu mode="inline" />
+                                <Menu mode="inline" showDrawer={showDrawer} />
                             </Drawer>
                         </>
                     ) : (
@@ -42,7 +42,7 @@ export const NavigationBar = () => {
 
 const TITLE_WIDTH = 230
 const Header = styled(BaseHeader)`
-    color: ${Colors.dark_green};
+    color: ${Colors.black};
     padding-bottom: 1px;
     border-bottom: solid 1px #e8e8e8;
     background-color: ${Colors.white};
@@ -51,12 +51,8 @@ const Header = styled(BaseHeader)`
         0 6px 16px -11px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
-    margin-bottom: 20px;
     z-index: 99990;
-
-    background-color: white;
-    border-bottom: 0;
-    padding: 0 4px 0 24px;
+    padding: 0 24px;
 `
 
 const Title = styled.div`

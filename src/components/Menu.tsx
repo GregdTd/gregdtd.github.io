@@ -34,11 +34,14 @@ const items: MenuProps['items'] = [
     },
 ]
 
-export const Menu: React.FC<{ mode: 'horizontal' | 'vertical' | 'inline' }> = ({ mode }) => {
+export const Menu: React.FC<{ mode: 'horizontal' | 'vertical' | 'inline'; showDrawer?: () => void }> = ({ mode, showDrawer }) => {
     const [current, setCurrent] = useState('mail')
 
     const onClick: MenuProps['onClick'] = (e) => {
         setCurrent(e.key)
+        if (showDrawer !== undefined) {
+            showDrawer()
+        }
         scroller.scrollTo(e.key, { smooth: true, duration: 500 })
     }
 
@@ -46,7 +49,7 @@ export const Menu: React.FC<{ mode: 'horizontal' | 'vertical' | 'inline' }> = ({
 }
 
 const SMenu = styled(BaseMenu)`
-    color: ${Colors.dark_green};
+    color: ${Colors.light_black};
     justify-content: flex-end;
     flex: auto;
     min-width: 0px;

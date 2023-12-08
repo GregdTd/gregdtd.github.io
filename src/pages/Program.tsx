@@ -3,6 +3,7 @@ import BaseMeta from 'antd/es/card/Meta'
 import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
 import { SectionWrapper } from '../styles/Layout'
+import { mobile } from '../styles/media-queries'
 
 export const Program: React.FC = () => {
     return (
@@ -71,6 +72,10 @@ const Card = styled(BaseCard)`
         rgba(0, 0, 0, 0.07) 0px 8px 16px,
         rgba(0, 0, 0, 0.07) 0px 16px 32px,
         rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+    @media ${mobile} {
+        width: 100%;
+    }
 `
 
 const Item = styled.li`
@@ -87,6 +92,10 @@ const Item = styled.li`
 const Emoji = styled.span`
     font-size: 32px;
     padding-right: 15px;
+
+    @media ${mobile} {
+        font-size: 24px;
+    }
 `
 
 const Tag = styled(BaseTag)`
@@ -101,8 +110,15 @@ const Meta = styled(BaseMeta)`
 `
 const ItemTitle = styled.div`
     margin-bottom: 0 !important;
+    @media ${mobile} {
+        font-size: 16px;
+    }
 `
 
 const Description = styled.span`
     font-size: 16px;
+
+    @media ${mobile} {
+        font-size: 12px;
+    }
 `

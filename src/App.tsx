@@ -1,5 +1,6 @@
 import { ConfigProvider, Layout } from 'antd'
-import { Content, Footer } from 'antd/es/layout/layout'
+import { Footer as BaseFooter, Content } from 'antd/es/layout/layout'
+import styled from 'styled-components'
 import { NavigationBar } from './components/NavigationBar'
 import { Housing } from './pages/Housing'
 import { Place } from './pages/Place'
@@ -20,9 +21,6 @@ export const App = () => (
                     itemSelectedColor: `${Colors.green}`,
                     itemHoverColor: `${Colors.green}`,
                 },
-                Layout: {
-                    colorBgLayout: `${Colors.green}`,
-                },
             },
         }}
     >
@@ -40,3 +38,10 @@ export const App = () => (
 )
 
 export default App
+
+const Footer = styled(BaseFooter)`
+    padding: 8px;
+    font-size: 10px;
+    text-align: center;
+    background-color: ${Colors.white};
+`

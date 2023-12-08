@@ -3,11 +3,11 @@ import { SectionWrapper } from '../styles/Layout'
 export const Housing: React.FC = () => {
     return (
         <SectionWrapper id="housing">
-            <text>
+            <div>
                 Nous vous conseillons vivement de regarder les appartements et maisons sur Airbnb, Abritel ou Booking. Dans la région, beaucoup sont des locations saisonnières,
                 vous devriez trouver votre bonheur. Nous vous conseillons les villes de Crac’h si vous souhaitez être proche du lieu de mariage, Locmariaquer (lieu de la messe), La
                 Trinité-sur-Mer et Saint Philibert. Voici tout de même une petite sélection d’hôtels, maisons d’hôte et campings à tous les tarifs :
-            </text>
+            </div>
             <div>
                 CRAC’H (proche lieu du mariage) CAMPING (💵) - Le Fort Espagnol (bungalows, emplacements pour tente): https://www.fort-espagnol.com/sejournez/ CHAMBRES D’HOTE (💵)
                 - Kerpunce : https://www.booking.com/Share-C890zgQ SAINT PHILIBERT (13 min en voiture du lieu du mariage) HOTELS (💵💵) - La villa Bel ange :
