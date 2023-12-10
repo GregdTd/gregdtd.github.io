@@ -2,9 +2,9 @@ export enum Colors {
     black = 'rgba(0, 0, 0, 1)',
     light_black = 'rgba(0, 0, 0, 0.5)',
     white = 'rgba(255, 255, 255, 1)',
-    light_green = 'rgba(159, 175, 161, 1)', //'rgba(104, 157, 113, 0.4)', //9FAFA1
+    light_green = 'rgba(215, 250, 219, 1)', // D7FADB
     green = 'rgba(104, 157, 113, 1)', //689D71
-    dark_green = 'rgba(77, 103, 0, 1)', //4D6700
+    dark_green = 'rgba(54, 105, 65, 1)', //366941
 
     purple = 'rgba(153, 153, 204, 1)', //9999CC
 

@@ -1,7 +1,7 @@
 import { CalendarFilled, CompassFilled, GiftFilled, HomeFilled, RocketFilled } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
 import { Menu as BaseMenu } from 'antd'
-import React from 'react'
+import React, { SetStateAction } from 'react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
@@ -37,8 +37,8 @@ const items: MenuProps['items'] = [
 
 interface BaseMenuProps {
     mode: 'horizontal' | 'vertical' | 'inline'
-    currentValueSelected: string | undefined
-    setCurrentValue: React.Dispatch<string | undefined>
+    currentValueSelected: string
+    setCurrentValue: React.Dispatch<SetStateAction<string>>
     showDrawer?: () => void
 }
 export const Menu: React.FC<BaseMenuProps> = ({ mode, currentValueSelected, setCurrentValue, showDrawer }) => {
@@ -54,7 +54,7 @@ export const Menu: React.FC<BaseMenuProps> = ({ mode, currentValueSelected, setC
 }
 
 const SMenu = styled(BaseMenu)`
-    color: ${Colors.light_black};
+    color: ${Colors.dark_green};
     justify-content: flex-end;
     flex: auto;
     min-width: 0px;

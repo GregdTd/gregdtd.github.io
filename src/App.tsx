@@ -2,7 +2,7 @@ import { ConfigProvider, Layout } from 'antd'
 import { Footer as BaseFooter, Content } from 'antd/es/layout/layout'
 import styled from 'styled-components'
 import { NavigationBar } from './components/NavigationBar'
-import { Housing } from './pages/Accomodation'
+import { Accomodation } from './pages/Accomodation'
 import { Place } from './pages/Location'
 import { Program } from './pages/Program'
 import { Welcome } from './pages/Welcome'
@@ -30,9 +30,14 @@ export const App = () => (
                 <Welcome />
                 <Program />
                 <Place />
-                <Housing />
+                <Accomodation />
             </Content>
-            <Footer>All right reserved</Footer>
+            <Footer>
+                All right reserved-{' '}
+                <a href="www.freepik.com" style={{ fontSize: '6px' }}>
+                    Icons designed by Freepik
+                </a>
+            </Footer>
         </Layout>
     </ConfigProvider>
 )

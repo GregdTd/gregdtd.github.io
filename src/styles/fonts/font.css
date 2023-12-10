@@ -11,3 +11,10 @@
   font-style: normal;
   src: url('CaviarDreams.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'caviar-dreams';
+  font-weight: bold;
+  font-style: normal;
+  src: url('CaviarDreams_Bold.ttf') format('truetype');
+}

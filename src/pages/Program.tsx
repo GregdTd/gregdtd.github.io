@@ -1,6 +1,7 @@
 import { Card as BaseCard, Tag as BaseTag } from 'antd'
 import BaseMeta from 'antd/es/card/Meta'
 import styled from 'styled-components'
+import { Emoji as BaseEmoji } from '../components/Emoji'
 import { Colors } from '../styles/Colors'
 import { SectionWrapper } from '../styles/Layout'
 import { mobile } from '../styles/media-queries'
@@ -14,23 +15,23 @@ export const Program: React.FC = () => {
                     <Card title="Vendredi 14 juin" bordered={true}>
                         <Item>
                             <Meta
-                                avatar={<Emoji>⛪️</Emoji>}
+                                avatar={<Emoji value="⛪️" />}
                                 title={<ItemTitle>Messe</ItemTitle>}
-                                description={<Description>Église notre dame de Kedro à Locmariaquer</Description>}
+                                description={<Description>Église Notre Dame de Kedro à Locmariaquer</Description>}
                             />
                             <Tag bordered={false}>15h00</Tag>
                         </Item>
 
                         <Item>
-                            <Meta avatar={<Emoji>🍸</Emoji>} title={<ItemTitle>Cocktail</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
+                            <Meta avatar={<Emoji value="🍸" />} title={<ItemTitle>Cocktail</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>17h30</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>🍽️</Emoji>} title={<ItemTitle>Dîner</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
+                            <Meta avatar={<Emoji value="🍽️" />} title={<ItemTitle>Dîner</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>20h00</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>💃</Emoji>} title={<ItemTitle>Soirée</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
+                            <Meta avatar={<Emoji value="💃" />} title={<ItemTitle>Soirée</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>23h30</Tag>
                         </Item>
                     </Card>
@@ -38,11 +39,15 @@ export const Program: React.FC = () => {
                 <Column>
                     <Card title="Samedi 15 juin" bordered={true}>
                         <Item>
-                            <Meta avatar={<Emoji>🦪</Emoji>} title={<ItemTitle>Retour de plage</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
+                            <Meta
+                                avatar={<Emoji value="🦪" />}
+                                title={<ItemTitle>Retour de plage</ItemTitle>}
+                                description={<Description>Château de Kérantré à Crac'h</Description>}
+                            />
                             <Tag bordered={false}>17h30</Tag>
                         </Item>
                         <Item>
-                            <Meta avatar={<Emoji>🪩</Emoji>} title={<ItemTitle>Rebond</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
+                            <Meta avatar={<Emoji value="🪩" />} title={<ItemTitle>Rebond</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
                             <Tag bordered={false}>20h30</Tag>
                         </Item>
                     </Card>
@@ -62,6 +67,10 @@ const ColumnWrapper = styled.div`
 
 const Column = styled.div`
     padding: 0px 0px;
+`
+
+const Emoji = styled(BaseEmoji)`
+    padding-right: 15px;
 `
 
 const Card = styled(BaseCard)`
@@ -90,18 +99,9 @@ const Item = styled.li`
     }
 `
 
-const Emoji = styled.span`
-    font-size: 32px;
-    padding-right: 15px;
-
-    @media ${mobile} {
-        font-size: 24px;
-    }
-`
-
 const Tag = styled(BaseTag)`
-    background-color: ${Colors.light_brown};
-    color: ${Colors.dark_brown};
+    background-color: ${Colors.light_green};
+    color: ${Colors.black};
     margin-bottom: 38px;
 `
 
@@ -111,6 +111,7 @@ const Meta = styled(BaseMeta)`
 `
 const ItemTitle = styled.div`
     margin-bottom: 0 !important;
+    font-weight: normal;
     @media ${mobile} {
         font-size: 16px;
     }

@@ -27,4 +27,5 @@ const Section = styled.section`
 
 const Title = styled.h1`
     font-size: 36px;
+    font-weight: normal;
 `

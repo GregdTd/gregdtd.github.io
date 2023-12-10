@@ -12,14 +12,14 @@ const TITLE = 'Vendredi 14 juin'
 
 export const NavigationBar = () => {
     const [open, setOpen] = useState(false)
-    const [current, setCurrent] = useState(undefined)
+    const [current, setCurrent] = useState('')
     const showDrawer = () => {
         setOpen(!open)
     }
     const isTabletOrMobile = useMedia(`screen and (max-width: 1024px)`)
 
     const onTitleClick = () => {
-        setCurrent(undefined)
+        setCurrent('')
         animateScroll.scrollToTop({ duration: 500, smooth: true })
     }
 
@@ -48,7 +48,7 @@ export const NavigationBar = () => {
 
 const TITLE_WIDTH = 230
 const Header = styled(BaseHeader)`
-    color: ${Colors.black};
+    color: ${Colors.dark_green};
     padding-bottom: 1px;
     border-bottom: solid 1px #e8e8e8;
     background-color: ${Colors.white};
