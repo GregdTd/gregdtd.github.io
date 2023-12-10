@@ -5,31 +5,32 @@ import React from 'react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
+import { Pages, PagesTitles } from '../utils/types'
 
 const items: MenuProps['items'] = [
     {
-        label: 'Programme',
-        key: 'program',
+        label: PagesTitles[Pages.PROGRAM],
+        key: Pages.PROGRAM,
         icon: <CalendarFilled />,
     },
     {
-        label: 'Accès',
-        key: 'place',
+        label: PagesTitles[Pages.LOCATION],
+        key: Pages.LOCATION,
         icon: <CompassFilled />,
     },
     {
-        label: 'Logements',
-        key: 'housing',
+        label: PagesTitles[Pages.ACCOMODATION],
+        key: Pages.ACCOMODATION,
         icon: <HomeFilled />,
     },
     {
-        label: 'Activités',
-        key: 'activity',
+        label: PagesTitles[Pages.ACTIVITIES],
+        key: Pages.ACTIVITIES,
         icon: <RocketFilled />,
     },
     {
-        label: 'Liste de mariage',
-        key: 'list',
+        label: PagesTitles[Pages.LIST],
+        key: Pages.LIST,
         icon: <GiftFilled />,
     },
 ]

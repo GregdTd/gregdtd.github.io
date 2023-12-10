@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
 import { SectionWrapper } from '../styles/Layout'
 import { mobile } from '../styles/media-queries'
+import { Pages } from '../utils/types'
 
 export const Program: React.FC = () => {
     return (
-        <SectionWrapper id="program" title="Programme">
+        <SectionWrapper id={Pages.PROGRAM}>
             <ColumnWrapper>
                 <Column>
                     <Card title="Vendredi 14 juin" bordered={true}>

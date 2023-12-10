@@ -5,10 +5,11 @@ import BaseJulieGregPhoto from '../assets/jugreg.svg?react'
 import { Arrow } from '../components/Arrow'
 import { SectionWrapper as BaseSectionWrapper } from '../styles/Layout'
 import { mobile } from '../styles/media-queries'
+import { Pages } from '../utils/types'
 
 export const Welcome: React.FC = () => {
     return (
-        <SectionWrapper id="welcome">
+        <SectionWrapper id={Pages.WELCOME}>
             <Title>
                 Bienvenue sur le site du mariage de<Surname>Julie et Grégoire</Surname>
             </Title>
