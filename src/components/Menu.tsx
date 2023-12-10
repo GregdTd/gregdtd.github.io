@@ -1,7 +1,7 @@
 import { CalendarFilled, CompassFilled, GiftFilled, HomeFilled, RocketFilled } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
 import { Menu as BaseMenu } from 'antd'
-import React, { useState } from 'react'
+import React from 'react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 import { Colors } from '../styles/Colors'
@@ -34,18 +34,22 @@ const items: MenuProps['items'] = [
     },
 ]
 
-export const Menu: React.FC<{ mode: 'horizontal' | 'vertical' | 'inline'; showDrawer?: () => void }> = ({ mode, showDrawer }) => {
-    const [current, setCurrent] = useState('mail')
-
+interface BaseMenuProps {
+    mode: 'horizontal' | 'vertical' | 'inline'
+    currentValueSelected: string | undefined
+    setCurrentValue: React.Dispatch<string | undefined>
+    showDrawer?: () => void
+}
+export const Menu: React.FC<BaseMenuProps> = ({ mode, currentValueSelected, setCurrentValue, showDrawer }) => {
     const onClick: MenuProps['onClick'] = (e) => {
-        setCurrent(e.key)
+        setCurrentValue(e.key)
         if (showDrawer !== undefined) {
             showDrawer()
         }
-        scroller.scrollTo(e.key, { smooth: true, duration: 500 })
+        scroller.scrollTo(e.key, { smooth: true, duration: 500, offset: 30 })
     }
 
-    return <SMenu onClick={onClick} selectedKeys={[current]} mode={mode} items={items} />
+    return <SMenu onClick={onClick} selectedKeys={currentValueSelected ? [currentValueSelected] : undefined} mode={mode} items={items} />
 }
 
 const SMenu = styled(BaseMenu)`

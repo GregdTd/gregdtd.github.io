@@ -12,15 +12,21 @@ const TITLE = 'Vendredi 14 juin'
 
 export const NavigationBar = () => {
     const [open, setOpen] = useState(false)
+    const [current, setCurrent] = useState(undefined)
     const showDrawer = () => {
         setOpen(!open)
     }
     const isTabletOrMobile = useMedia(`screen and (max-width: 1024px)`)
 
+    const onTitleClick = () => {
+        setCurrent(undefined)
+        animateScroll.scrollToTop({ duration: 500, smooth: true })
+    }
+
     return (
         <Header>
             <nav>
-                <Title onClick={() => animateScroll.scrollToTop({ duration: 500, smooth: true })}>{TITLE}</Title>
+                <Title onClick={onTitleClick}>{TITLE}</Title>
                 <NavBarMenu>
                     {isTabletOrMobile ? (
                         <>
@@ -28,11 +34,11 @@ export const NavigationBar = () => {
                                 <MenuOutlined />
                             </BurgerButton>
                             <Drawer title={TITLE} placement="right" closable={true} onClose={showDrawer} open={open} style={{ zIndex: 99999 }}>
-                                <Menu mode="inline" showDrawer={showDrawer} />
+                                <Menu mode="inline" showDrawer={showDrawer} currentValueSelected={current} setCurrentValue={setCurrent} />
                             </Drawer>
                         </>
                     ) : (
-                        <Menu mode="horizontal" />
+                        <Menu mode="horizontal" currentValueSelected={current} setCurrentValue={setCurrent} />
                     )}
                 </NavBarMenu>
             </nav>
