@@ -72,6 +72,11 @@ const ColumnWrapper = styled.div`
     justify-content: center;
     margin: 0px 24px;
     gap: 24px;
+    padding-bottom: 150px;
+
+        @media ${mobile} {
+        padding-bottom: unset;
+    }
 `
 
 const Column = styled.div`

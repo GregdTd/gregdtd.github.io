@@ -35,6 +35,7 @@ export const Welcome: React.FC = () => {
 
 const SectionWrapper = styled(BaseSectionWrapper)`
     padding-top: 54px;
+    height: 100vh;
 `
 
 const Wrapper = styled.div`

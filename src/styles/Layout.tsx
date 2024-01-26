@@ -18,7 +18,6 @@ export const SectionWrapper: React.FC<{
 }
 
 const Wrapper = styled.div`
-    height: 100vh;
     padding: 0px 16px;
     background-color: ${Colors.white};
 `
