@@ -8,53 +8,62 @@ import { mobile } from '../styles/media-queries'
 import { Pages } from '../utils/types'
 
 export const Program: React.FC = () => {
-    return (
-        <SectionWrapper id={Pages.PROGRAM}>
-            <ColumnWrapper>
-                <Column>
-                    <Card title="Vendredi 14 juin" bordered={true}>
-                        <Item>
-                            <Meta
-                                avatar={<Emoji value="⛪️" />}
-                                title={<ItemTitle>Messe</ItemTitle>}
-                                description={<Description>Église Notre Dame de Kedro à Locmariaquer</Description>}
-                            />
-                            <Tag bordered={false}>15h00</Tag>
-                        </Item>
-
-                        <Item>
-                            <Meta avatar={<Emoji value="🍸" />} title={<ItemTitle>Cocktail</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
-                            <Tag bordered={false}>17h30</Tag>
-                        </Item>
-                        <Item>
-                            <Meta avatar={<Emoji value="🍽️" />} title={<ItemTitle>Dîner</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
-                            <Tag bordered={false}>20h00</Tag>
-                        </Item>
-                        <Item>
-                            <Meta avatar={<Emoji value="💃" />} title={<ItemTitle>Soirée</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
-                            <Tag bordered={false}>23h30</Tag>
-                        </Item>
-                    </Card>
-                </Column>
-                <Column>
-                    <Card title="Samedi 15 juin" bordered={true}>
-                        <Item>
-                            <Meta
-                                avatar={<Emoji value="🦪" />}
-                                title={<ItemTitle>Retour de plage</ItemTitle>}
-                                description={<Description>Château de Kérantré à Crac'h</Description>}
-                            />
-                            <Tag bordered={false}>17h30</Tag>
-                        </Item>
-                        <Item>
-                            <Meta avatar={<Emoji value="🪩" />} title={<ItemTitle>Rebond</ItemTitle>} description={<Description>Château de Kérantré à Crac'h</Description>} />
-                            <Tag bordered={false}>20h30</Tag>
-                        </Item>
-                    </Card>
-                </Column>
-            </ColumnWrapper>
-        </SectionWrapper>
-    )
+  return (
+    <SectionWrapper id={Pages.PROGRAM}>
+      <ColumnWrapper>
+        <Column>
+          <Card title="Vendredi 14 juin" bordered={true}>
+            <Item>
+              <Meta
+                avatar={<Emoji value="⛪️" />}
+                title={<ItemTitle>Messe</ItemTitle>}
+                description={
+                  <Description>
+                    Église Notre Dame de Kedro à Locmariaquer
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>15h00</Tag>
+            </Item>
+            <Item>
+              <Meta
+                avatar={<Emoji value="🍸" />}
+                title={<ItemTitle>Réception</ItemTitle>}
+                description={
+                  <Description>Château de Kérantré à Crac'h</Description>
+                }
+              />
+              <Tag bordered={false}>17h30</Tag>
+            </Item>
+          </Card>
+        </Column>
+        <Column>
+          <Card title="Samedi 15 juin" bordered={true}>
+            <Item>
+              <Meta
+                avatar={<Emoji value="🦪" />}
+                title={<ItemTitle>Retour de plage</ItemTitle>}
+                description={
+                  <Description>Château de Kérantré à Crac'h</Description>
+                }
+              />
+              <Tag bordered={false}>17h30</Tag>
+            </Item>
+            <Item>
+              <Meta
+                avatar={<Emoji value="🪩" />}
+                title={<ItemTitle>Rebond</ItemTitle>}
+                description={
+                  <Description>Château de Kérantré à Crac'h</Description>
+                }
+              />
+              <Tag bordered={false}>20h30</Tag>
+            </Item>
+          </Card>
+        </Column>
+      </ColumnWrapper>
+    </SectionWrapper>
+  )
 }
 
 const ColumnWrapper = styled.div`
@@ -75,6 +84,7 @@ const Emoji = styled(BaseEmoji)`
 
 const Card = styled(BaseCard)`
     width: 460px;
+    min-height: 300px;
     box-shadow:
         rgba(0, 0, 0, 0.07) 0px 1px 2px,
         rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -118,9 +128,12 @@ const ItemTitle = styled.div`
 `
 
 const Description = styled.span`
+    display: flex;
     font-size: 16px;
+    width: 230px;
 
     @media ${mobile} {
         font-size: 12px;
+        width: 160px;
     }
 `
