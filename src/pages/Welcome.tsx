@@ -2,30 +2,35 @@
 import styled from 'styled-components'
 import BaseJulieGregPhoto from '../assets/jugreg.svg?react'
 
-import { Arrow } from '../components/Arrow'
+import { Arrow as BaseArrow } from '../components/Arrow'
 import { SectionWrapper as BaseSectionWrapper } from '../styles/Layout'
 import { mobile } from '../styles/media-queries'
 import { Pages } from '../utils/types'
 
 export const Welcome: React.FC = () => {
-    return (
-        <SectionWrapper id={Pages.WELCOME}>
-            <Title>
-                Bienvenue sur le site du mariage de<Surname>Julie et Grégoire</Surname>
-            </Title>
-            <Wrapper>
-                <WrapperText>
-                    <Text>Nous sommes très heureux et impatients de tous vous retrouver en juin pour célébrer l’amour et faire la fête.</Text>
-                    <Text>
-                        En attendant, nous vous avons concocté ce site sur lequel vous retrouverez toutes les infos nécessaires à la préparation de votre séjour breton: programme,
-                        logements, propositions d’activités, plans d’accès et liste de mariage.
-                    </Text>
-                </WrapperText>
-                <JulieGregPhoto />
-            </Wrapper>
-            <Arrow />
-        </SectionWrapper>
-    )
+  return (
+    <SectionWrapper id={Pages.WELCOME}>
+      <Title>
+        Bienvenue sur le site du mariage de<Surname>Julie et Grégoire</Surname>
+      </Title>
+      <Wrapper>
+        <WrapperText>
+          <Text>
+            Nous sommes très heureux et impatients de tous vous retrouver en
+            juin pour célébrer l’amour et faire la fête.
+          </Text>
+          <Text>
+            En attendant, nous vous avons concocté ce site sur lequel vous
+            retrouverez toutes les infos nécessaires à la préparation de votre
+            séjour breton: programme, logements, propositions d’activités, plans
+            d’accès et liste de mariage.
+          </Text>
+        </WrapperText>
+        <JulieGregPhoto />
+      </Wrapper>
+      <Arrow />
+    </SectionWrapper>
+  )
 }
 
 const SectionWrapper = styled(BaseSectionWrapper)`
@@ -49,7 +54,7 @@ const JulieGregPhoto = styled(BaseJulieGregPhoto)`
     height: auto;
 
     @media ${mobile} {
-        width: 100%;
+        width: 50vw;
         padding-top: 16px;
     }
 `
@@ -87,4 +92,9 @@ const Text = styled.div`
     text-align: justify;
     hyphens: auto;
     padding-top: 24px;
+`
+
+const Arrow = styled(BaseArrow)`
+    position: absolute;
+    bottom: 0;
 `

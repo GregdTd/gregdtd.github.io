@@ -11,39 +11,55 @@ import { Menu } from './Menu'
 const TITLE = 'Vendredi 14 juin'
 
 export const NavigationBar = () => {
-    const [open, setOpen] = useState(false)
-    const [current, setCurrent] = useState('')
-    const showDrawer = () => {
-        setOpen(!open)
-    }
-    const isTabletOrMobile = useMedia(`screen and (max-width: 1024px)`)
+  const [open, setOpen] = useState(false)
+  const [current, setCurrent] = useState('')
+  const showDrawer = () => {
+    setOpen(!open)
+  }
+  const isTabletOrMobile = useMedia('screen and (max-width: 1024px)')
 
-    const onTitleClick = () => {
-        setCurrent('')
-        animateScroll.scrollToTop({ duration: 500, smooth: true })
-    }
+  const onTitleClick = () => {
+    setCurrent('')
+    animateScroll.scrollToTop({ duration: 500, smooth: true })
+  }
 
-    return (
-        <Header>
-            <nav>
-                <Title onClick={onTitleClick}>{TITLE}</Title>
-                <NavBarMenu>
-                    {isTabletOrMobile ? (
-                        <>
-                            <BurgerButton type="text" onClick={showDrawer}>
-                                <MenuOutlined />
-                            </BurgerButton>
-                            <Drawer title={TITLE} placement="right" closable={true} onClose={showDrawer} open={open} style={{ zIndex: 99999 }}>
-                                <Menu mode="inline" showDrawer={showDrawer} currentValueSelected={current} setCurrentValue={setCurrent} />
-                            </Drawer>
-                        </>
-                    ) : (
-                        <Menu mode="horizontal" currentValueSelected={current} setCurrentValue={setCurrent} />
-                    )}
-                </NavBarMenu>
-            </nav>
-        </Header>
-    )
+  return (
+    <Header>
+      <nav>
+        <Title onClick={onTitleClick}>{TITLE}</Title>
+        <NavBarMenu>
+          {isTabletOrMobile ? (
+            <>
+              <BurgerButton type="text" onClick={showDrawer}>
+                <MenuOutlined />
+              </BurgerButton>
+              <Drawer
+                title={TITLE}
+                placement="right"
+                closable={true}
+                onClose={showDrawer}
+                open={open}
+                style={{ zIndex: 99999 }}
+              >
+                <Menu
+                  mode="inline"
+                  showDrawer={showDrawer}
+                  currentValueSelected={current}
+                  setCurrentValue={setCurrent}
+                />
+              </Drawer>
+            </>
+          ) : (
+            <Menu
+              mode="horizontal"
+              currentValueSelected={current}
+              setCurrentValue={setCurrent}
+            />
+          )}
+        </NavBarMenu>
+      </nav>
+    </Header>
+  )
 }
 
 const TITLE_WIDTH = 230
@@ -70,6 +86,7 @@ const Title = styled.div`
 `
 
 const NavBarMenu = styled.div`
+    font-weight: bold;
     width: calc(100% - ${TITLE_WIDTH}px);
     float: left;
 `
