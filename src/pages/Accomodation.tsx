@@ -1,38 +1,164 @@
+import styled from 'styled-components'
+import {
+  Card,
+  Description,
+  Item,
+  ItemTitle,
+  Meta,
+  Tag
+} from '../components/Card'
 import { SectionWrapper } from '../styles/Layout'
+import { mobile } from '../styles/media-queries'
 import { Pages } from '../utils/types'
 
 export const Accomodation: React.FC = () => {
-    return (
-        <SectionWrapper id={Pages.ACCOMODATION}>
-            <div>
-                Nous vous conseillons vivement de regarder les appartements et maisons sur Airbnb, Abritel ou Booking. Dans la région, beaucoup sont des locations saisonnières,
-                vous devriez trouver votre bonheur. Nous vous conseillons les villes de Crac’h si vous souhaitez être proche du lieu de mariage, Locmariaquer (lieu de la messe), La
-                Trinité-sur-Mer et Saint Philibert. Voici tout de même une petite sélection d’hôtels, maisons d’hôte et campings à tous les tarifs :
-            </div>
-            <div>
-                CRAC’H (proche lieu du mariage) CAMPING (💵) - Le Fort Espagnol (bungalows, emplacements pour tente): https://www.fort-espagnol.com/sejournez/ CHAMBRES D’HOTE (💵)
-                - Kerpunce : https://www.booking.com/Share-C890zgQ SAINT PHILIBERT (13 min en voiture du lieu du mariage) HOTELS (💵💵) - La villa Bel ange :
-                https://www.booking.com/Share-XSsf0c LA TRINITE SUR MER (16min en voiture du lieu du mariage) CHAMBRES D’HOTE (💵💵💵) - Les chambre du Keriolet :
-                https://www.booking.com/Share-URCH5w HOTELS (💵💵/ 💵💵💵) - Le galet hôtel & spa : https://www.booking.com/Share-3OHrTzs - Le lodge Kerisper :
-                https://www.booking.com/Share-IQmIv8 - Trinité Hotel : https://www.booking.com/Share-BLBKkYc LOCMARIAQUER (lieu de la messe - 12 min en voiture du lieu du mariage)
-                CHAMBRES D’HOTE (💵💵💵) - Rêves de bord de mer : https://www.booking.com/Share-z3UNCq
-            </div>
-            <div>
-                CRAC’H (proche lieu du mariage) CAMPING (💵) - Le Fort Espagnol (bungalows, emplacements pour tente): https://www.fort-espagnol.com/sejournez/ CHAMBRES D’HOTE (💵)
-                - Kerpunce : https://www.booking.com/Share-C890zgQ SAINT PHILIBERT (13 min en voiture du lieu du mariage) HOTELS (💵💵) - La villa Bel ange :
-                https://www.booking.com/Share-XSsf0c LA TRINITE SUR MER (16min en voiture du lieu du mariage) CHAMBRES D’HOTE (💵💵💵) - Les chambre du Keriolet :
-                https://www.booking.com/Share-URCH5w HOTELS (💵💵/ 💵💵💵) - Le galet hôtel & spa : https://www.booking.com/Share-3OHrTzs - Le lodge Kerisper :
-                https://www.booking.com/Share-IQmIv8 - Trinité Hotel : https://www.booking.com/Share-BLBKkYc LOCMARIAQUER (lieu de la messe - 12 min en voiture du lieu du mariage)
-                CHAMBRES D’HOTE (💵💵💵) - Rêves de bord de mer : https://www.booking.com/Share-z3UNCq
-            </div>
-            <div>
-                CRAC’H (proche lieu du mariage) CAMPING (💵) - Le Fort Espagnol (bungalows, emplacements pour tente): https://www.fort-espagnol.com/sejournez/ CHAMBRES D’HOTE (💵)
-                - Kerpunce : https://www.booking.com/Share-C890zgQ SAINT PHILIBERT (13 min en voiture du lieu du mariage) HOTELS (💵💵) - La villa Bel ange :
-                https://www.booking.com/Share-XSsf0c LA TRINITE SUR MER (16min en voiture du lieu du mariage) CHAMBRES D’HOTE (💵💵💵) - Les chambre du Keriolet :
-                https://www.booking.com/Share-URCH5w HOTELS (💵💵/ 💵💵💵) - Le galet hôtel & spa : https://www.booking.com/Share-3OHrTzs - Le lodge Kerisper :
-                https://www.booking.com/Share-IQmIv8 - Trinité Hotel : https://www.booking.com/Share-BLBKkYc LOCMARIAQUER (lieu de la messe - 12 min en voiture du lieu du mariage)
-                CHAMBRES D’HOTE (💵💵💵) - Rêves de bord de mer : https://www.booking.com/Share-z3UNCq
-            </div>
-        </SectionWrapper>
-    )
+  return (
+    <SectionWrapper id={Pages.PROGRAM}>
+      <Wrapper>
+        <Column>
+          <Card title="Crac'h" bordered={true}>
+            <Meta description="Logements les plus proche du lieu de mariage" />
+            <Item>
+              <Meta
+                title={<ItemTitle>Le Fort Espagnol (💵)</ItemTitle>}
+                description={
+                  <Description>
+                    <span>
+                      Bungalows, emplacements pour tentes.{' '}
+                      <a href="https://www.fort-espagnol.com/sejournez/">
+                        Plus d'information
+                      </a>
+                    </span>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Camping</Tag>
+            </Item>
+            <Item>
+              <Meta
+                title={<ItemTitle>Kerpunce</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-C890zgQ">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Chambre d'hôte</Tag>
+            </Item>
+          </Card>
+          <Card title="Saint Philibert" bordered={true}>
+            <Meta description="13 min en voiture du lieu de mariage" />
+            <Item>
+              <Meta
+                title={<ItemTitle>La villa Bel ange</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-XSsf0c">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Hôtel</Tag>
+            </Item>
+          </Card>
+        </Column>
+        <Column>
+          <Card title="Locmariaquer" bordered={true}>
+            <Meta description="Lieu de la messe - 12 min en voiture du lieu du mariage" />
+            <Item>
+              <Meta
+                title={<ItemTitle>Rêves de bord de mer</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-z3UNCq">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Chambre d'höte</Tag>
+            </Item>
+          </Card>
+          <Card title="La Trinité-sur-Mer" bordered={true}>
+            <Meta description="16 min en voiture du lieu de mariage" />
+            <Item>
+              <Meta
+                title={<ItemTitle>Les chambre du Keriolet</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-URCH5w">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Chambres d'hôte</Tag>
+            </Item>
+            <Item>
+              <Meta
+                title={<ItemTitle>Le galet hôtel & spa</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-3OHrTzs">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Hôtel</Tag>
+            </Item>
+            <Item>
+              <Meta
+                title={<ItemTitle>Le lodge Kerisper</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-URCH5w">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Hôtel</Tag>
+            </Item>
+            <Item>
+              <Meta
+                title={<ItemTitle>Trinité Hotel</ItemTitle>}
+                description={
+                  <Description>
+                    <a href="https://www.booking.com/Share-BLBKkYc">
+                      Plus d'information
+                    </a>
+                  </Description>
+                }
+              />
+              <Tag bordered={false}>Hôtel</Tag>
+            </Item>
+          </Card>
+        </Column>
+      </Wrapper>
+    </SectionWrapper>
+  )
 }
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 24px;
+    gap: 24px;
+    padding-bottom: 150px;
+
+    @media ${mobile} {
+        padding-bottom: 20px;
+    }
+`
+
+const Column = styled.div`
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  padding: 0px 0px;
+`
