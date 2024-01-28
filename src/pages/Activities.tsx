@@ -79,8 +79,7 @@ export const Activities: React.FC = () => {
           <Activity>
             <Emoji value="🏖️" />
             <Header>
-              Se baigner à la grand plage de Carnac ou celle du Men-dû à La
-              Trinité-sur-Mer
+              Se baigner à la grand plage de Carnac ou celle de Kernevest à Saint Philibert
             </Header>
             <Link url="https://plages.letelegramme.fr/56340/carnac">
               Pour en trouver d’autres, c’est ici
