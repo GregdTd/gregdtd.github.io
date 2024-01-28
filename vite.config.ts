@@ -4,13 +4,13 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-        react(),
-        svgr({
-            svgrOptions: {
-                // svgr options
-            },
-        }),
-    ],
-    base: 'https://gregdtd.github.io/',
+  plugins: [
+    react(),
+    svgr({
+      svgrOptions: {
+        // svgr options
+      }
+    })
+  ],
+  base: 'https://www.mariagejuliegregoire.detrogoff.fr/'
 })
