@@ -7,7 +7,7 @@ export const List: React.FC = () => (
   <SectionWrapper id={Pages.LIST}>
     <Wrapper>
     <Link url="https://www.millemercismariage.com/gregetjulie/liste.html">
-        🔗 Lien vers mille mercis mariage
+        🔗 Lien vers la liste
       </Link>
     </Wrapper>
   </SectionWrapper>
