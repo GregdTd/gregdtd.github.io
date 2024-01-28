@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { NavigationBar } from './components/NavigationBar'
 
 import { Accomodation } from './pages/Accomodation'
+import { Activities } from './pages/Activities'
 import { Place } from './pages/Location'
 import { Program } from './pages/Program'
 import { Welcome } from './pages/Welcome'
@@ -32,6 +33,7 @@ export const App = () => (
         <Program />
         <Place />
         <Accomodation />
+        <Activities />
       </Content>
       <Footer>
         All right reserved-{' '}
