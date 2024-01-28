@@ -19,7 +19,7 @@ export const Program: React.FC = () => {
   return (
     <SectionWrapper id={Pages.PROGRAM}>
       <ColumnWrapper>
-        <Column>
+        <div>
           <Card title="Vendredi 14 juin" bordered={true}>
             <Item>
               <Meta
@@ -44,8 +44,8 @@ export const Program: React.FC = () => {
               <Tag bordered={false}>17h30</Tag>
             </Item>
           </Card>
-        </Column>
-        <Column>
+        </div>
+        <div>
           <Card title="Samedi 15 juin" bordered={true}>
             <Item>
               <Meta
@@ -68,7 +68,7 @@ export const Program: React.FC = () => {
               <Tag bordered={false}>20h30</Tag>
             </Item>
           </Card>
-        </Column>
+        </div>
       </ColumnWrapper>
     </SectionWrapper>
   )
@@ -82,13 +82,9 @@ const ColumnWrapper = styled.div`
     gap: 24px;
     padding-bottom: 150px;
 
-        @media ${mobile} {
-        padding-bottom: unset;
+    @media ${mobile} {
+      padding-bottom: unset;
     }
-`
-
-const Column = styled.div`
-    padding: 0px 0px;
 `
 
 const Emoji = styled(BaseEmoji)`
