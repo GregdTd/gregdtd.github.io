@@ -5,6 +5,7 @@ import { NavigationBar } from './components/NavigationBar'
 
 import { Accomodation } from './pages/Accomodation'
 import { Activities } from './pages/Activities'
+import { List } from './pages/List'
 import { Place } from './pages/Location'
 import { Program } from './pages/Program'
 import { Welcome } from './pages/Welcome'
@@ -34,6 +35,7 @@ export const App = () => (
         <Place />
         <Accomodation />
         <Activities />
+        <List />
       </Content>
       <Footer>
         All right reserved-{' '}
