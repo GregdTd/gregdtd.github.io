@@ -6,7 +6,7 @@ import { Pages } from '../utils/types'
 export const List: React.FC = () => (
   <SectionWrapper id={Pages.LIST}>
     <Wrapper>
-      <Link url="https://www.millemercismariage.com/gregetjulie/mariage-de-julie-legrand-et-gregoire-de-trogoff.html">
+    <Link url="https://www.millemercismariage.com/gregetjulie/liste.html">
         🔗 Lien vers mille mercis mariage
       </Link>
     </Wrapper>
