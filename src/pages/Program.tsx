@@ -31,7 +31,7 @@ export const Program: React.FC = () => {
                   </Description>
                 }
               />
-              <Tag bordered={false}>15h00</Tag>
+              <Tag bordered={false}>14h30</Tag>
             </Item>
             <Item>
               <Meta
